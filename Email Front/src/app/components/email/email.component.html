@@ -1,0 +1,32 @@
+
+
+    <form class="example-form" (ngSubmit)="doSubmit()">
+      <div class="container">
+          <h1>Send Email to Anyone</h1>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>To</mat-label>
+          <input type="email" matInput placeholder="Send To" name="to" [(ngModel)]="data.to">
+          </mat-form-field>
+          <br><br>
+          <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input  name="subject" matInput placeholder="Write Subject" [(ngModel)]="data.subject">
+              </mat-form-field>
+              <br><br>
+          <mat-form-field class="example-full-width">
+          <mat-label>Mail Message</mat-label>
+          <textarea name="message" [(ngModel)]="data.message" matInput placeholder="Dear sir/Ma'am............."></textarea>
+          </mat-form-field>
+          <br><br>
+          <mat-spinner class="spin" style="margin: auto;" *ngIf="flag"></mat-spinner>
+              <div class="text-center">
+                  <button [disabled]="flag" type="submit" mat-raised-button color="accent"> Send </button>
+                  <button type="reset" mat-raised-button color="warn"> Reset </button>
+              <br><br>
+          </div>
+          <!-- {{data | json}} -->
+        </div>
+    </form>
+
+

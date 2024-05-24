@@ -1,0 +1,44 @@
+body{
+    overflow: hidden;
+    background-color: #c3c5c5;
+}
+.card{
+    height: 552px;
+    width: 1103px;
+}
+
+.input-group-text{
+    padding: 0.75rem 0.75rem !important;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+   /*opacity: 50%;*/
+}
+
+/*.spinner{*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*    top: 45%;*/
+/*    align-self: center;*/
+/*    display: none;*/
+/*}*/
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top-color: #3498db;
+    position: absolute; /* To center the spinner on the button */
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the spinner within its space */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+

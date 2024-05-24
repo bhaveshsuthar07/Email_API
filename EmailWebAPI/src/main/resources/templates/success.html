@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="BaseTemplate::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Title</title>
+
+</head>
+<body>
+<section>
+    <div class="container m-5">
+        <div class="text-center font-italic text-success">
+            <h2>Email Send Successfully </h2>
+        </div>
+    </div>
+    <div class="container m-5">
+        <div class="text-center font-italic text-secondary">
+            <a th:href="@{/}" class="btn btn-danger">Compose Another Mail</a>
+        </div>
+    </div>
+</section>
+</body>
+</html>
